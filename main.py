@@ -13,9 +13,8 @@ if os.path.exists(insdir)and os.path.isdir(insdir):
  if response.status_code == 200:
     with open(savescrpath, 'wb') as file:
         file.write(response.content)
-        #while not os.path.exists(f'{insdir}download.py'):
-            #time.sleep(0.1)
-        subprocess.run(['python3', f'{insdir}download.py'])
+        while not os.path.exists(f'{insdir}download.py'):
+            time.sleep(0.1)
+        subprocess.run(['python3', 'download.py'], cwd=insdir)
 else:
   subprocess.run(['mkdir', '-p', insdir])
-
