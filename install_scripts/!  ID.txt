@@ -4,6 +4,7 @@ Here's the corresponding names of each program installed to their script IDs
 --A--
 aesfix         0
 aeskeyfind     1
+afflib         2
 
 --B--
 
